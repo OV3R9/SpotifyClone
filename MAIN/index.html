@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎧DROWN IN MUSIC🎧</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="body" onload="thumbnail(),loading()">
+    <div class="loading" id='loading'>
+        <img src="logoSpotify.png">
+    </div>
+    <div id="favoritesList"></div>
+    <main>
+        <audio id="music" src="sounds/MalyKsiaze.mp3" controls style="display: none;"></audio>
+        <div class="upper">
+            <a href="#" class="sigma" onclick="redirect(); return false;"><button class="menubutton mirror">&#10148;</button></a>
+            <div class="wrapper">
+                <h1 class="currently">ODTWARZANIE POLECANYCH UTWORÓW</h1>
+            </div>
+            <button class="menubutton">&#65049;</button>
+        </div>
+        <div class="container" id="container">
+            <div class="containerAnimated" id="containerAnimated"></div>
+        </div>
+        <div class="heart" id="heart" onclick="Change()"></div>
+        <h1 class="title" id="title"></h1>
+        <h1 class="author" id="author"></h1>
+        <div class="progress_bar" id="progress_bar">
+            <div class="progressed" id="progressed"></div>
+        </div>
+        <h3 class="duration" id="uptime">0:00</h3>
+        <h3 class="duration" id="full">0:00</h3>
+        <br>
+        <div class="utility shuffle" id="shuffle" onclick="shuffleSwitch()"></div>
+        <div class="utility skipback" onclick="cofnij()"></div>
+        <div class="playPause" id="playPause" onclick="PlayPause()"></div>
+        <div class="utility skipfront" onclick="skip()"></div>
+        <div class="utility repeat" id="repeat" onclick="repeatSwitch()"></div>
+    </main>
+    <div id="queue"></div>
+    <div class="loading2" id='loading2'>
+        <img src="logoSpotify.png">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

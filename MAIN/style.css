@@ -1,0 +1,425 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto&display=swap');
+
+*
+{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    overflow: hidden;
+}
+
+.mirror
+{
+    transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
+
+body
+{
+    z-index: -2;
+    background: black;
+}
+
+main
+{
+    position: relative;
+    font-size: 32px;
+    margin: auto;
+    width: 400px;
+    height: 100vh;
+    color: white;
+    overflow: visible;
+    z-index: 1;
+}
+
+.upper
+{
+    display: flex;
+    margin-top: 20px;
+}
+
+.menubutton
+{
+    margin-top: 3px;
+    display: inline-block;
+    background-color: transparent;
+    color: white;
+    width: 25px;
+    height: 30px;
+    border: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.sigma
+{
+    cursor: pointer;
+}
+
+.wrapper
+{
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.currently
+{
+    width: 460px;
+    text-align: center;
+    letter-spacing: 1px;
+    line-height: 20px;
+    display: inline-block;
+    font-size: 20px;
+    position: relative;
+    animation: slideRight 7s linear infinite;
+    white-space: nowrap;
+    user-select: none;
+}
+
+@keyframes slideRight {
+    0% {
+        left: -140%;
+    }
+    100% {
+        left: 110%;
+    }
+}
+
+.container
+{
+    margin-top: 50px;
+    width: 400px;
+    min-height: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+    display: grid;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: 8px 7px 50px 10px rgba(0, 0, 0, 1);
+    overflow: visible;
+}
+
+.title
+{
+    color: rgb(224, 224, 224);
+    display: inline-block;
+    margin-top: 40px;
+    font-size: 32px;
+    text-align: left;
+    line-height: 36px;
+}
+
+.title:hover
+{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.author
+{
+    display: block;
+    color: gray;
+    font-size: 20px;
+    text-align: left;
+}
+
+.author:hover
+{
+    color: white;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.heart
+{
+    margin-right: -15px;
+    margin-top: 25px;
+    float: right;
+    width: 80px;
+    height: 80px;
+    background-image: url('buttons/heart.png');
+    background-size: contain;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease;
+}
+
+.heart:hover
+{
+    animation: skala 1s forwards;
+}
+
+.progress_bar {
+    height: 10px;
+    width: 400px;
+    background-color: rgb(37, 37, 37);
+    margin-top: 30px;
+    border-radius: 5px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.progressed {
+    height: 10px;
+    background-color: white;
+    width: 0%;
+    transition: width 0.2s ease-in-out;
+    position: relative;
+    border-radius: 5px;
+    overflow: visible;
+    cursor: pointer;
+}
+
+.progressed::after {
+    overflow: visible;
+    content: '';
+    position: absolute;
+    right: -10px;
+    top: -2.5px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.progressed:hover
+{
+    background-color: rgb(48, 180, 48);
+}
+
+.duration
+{
+    margin-top: 10px;
+    font-size: 16px;
+    color: gray;
+    display: inline-block;
+    user-select: none;
+}
+
+.duration:nth-of-type(2)
+{
+    float: right;
+}
+
+.playPause
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-image: url('buttons/play.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.playPause:hover
+{
+    animation: skala 0.5s forwards;
+}
+
+@keyframes skala
+{
+    0%{
+        scale: 1.0;
+    }
+    100%
+    {
+        scale: 1.1;
+    }
+}
+
+
+.utility
+{
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    height: 70px;
+    width: 70px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 50%;
+    cursor: pointer;
+    user-select: none;
+}
+
+.shuffle
+{
+    background-image: url('buttons/shuffle.png');
+    scale: 0.8;
+}
+
+.skipback
+{
+    background-image: url('buttons/skipback.png');
+}
+
+.skipfront
+{
+    background-image: url('buttons/skipfront.png');
+}
+
+.repeat 
+{
+    background-image: url('buttons/repeat.png');
+}
+
+.containerAnimated
+{
+    position: absolute;
+    width: 400px;
+    height: 400px;
+}
+
+#favoritesList {
+    z-index: -1;
+    color: white;
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-70%);
+    background-color: rgba(32, 32, 32,0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+    user-select: none;
+}
+
+#favoritesList h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 36px;
+}
+
+#favoritesList li {
+    font-size: 26px;
+}
+
+.small
+{
+    padding: 0px;
+    display: inline-block;
+    max-width: 25px;
+    max-height: 25px;
+}
+
+#queue {
+    z-index: -1;
+    right: 30px;
+    top: 500px;
+    display: inline-block;
+    color: white;
+    margin-left: 150px;
+    position: absolute;
+    transform: translateY(-70%);
+    background-color: rgba(32, 32, 32,0.5);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 24px 0px rgb(0, 0, 0);
+    user-select: none;
+}
+
+#queue li
+{
+    text-align: center;
+}
+
+.bigga
+{
+    max-width: 200px;
+    max-height: 200px;
+}
+
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 10;
+    animation: fadeAway 4s forwards;
+    opacity: 1;
+    cursor: none;
+}
+
+.loading img
+{
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 150px;
+    max-width: 300px;
+}
+
+.loading2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    display: none;
+    cursor: none;
+    z-index: 2;
+}
+
+.loading2 img
+{
+    margin-top: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-height: 150px;
+    max-width: 300px;
+}
+
+.slide-bot
+{
+    animation: fadeIn 4s forwards;
+}
+
+@keyframes slideBot {
+    0% {
+        opacity: 0;
+        top: 100%;
+    }
+    100% {
+        opacity: 1;
+        top: 0%;
+    }
+}
+
+@keyframes fadeAway
+{
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}
+
+@keyframes fadeIn
+{
+    0% {
+        opacity: 0;
+
+    }
+    100% {
+        opacity: 1;
+    }
+}
